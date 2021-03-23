@@ -1,0 +1,82 @@
+#video {
+  .container {
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    & > .video-wrapper {
+      display: flex;
+      height: 300px;
+      overflow-x: auto;
+      padding-bottom: 2rem;
+      /* Works on Firefox */
+      & > * {
+        scrollbar-width: thin;
+        scrollbar-color: $primary white;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      &::-webkit-scrollbar {
+        height: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $primary;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 20px;
+        border: 3px solid $primary;
+      }
+      article {
+        margin-right: 1rem;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 1fr min-content;
+        border: 2px solid white;
+        padding: 5px;
+        .videoBox {
+          position: relative;
+          video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+          .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.5rem 1rem;
+            line-height: 1.2;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+    a {
+      border-radius: 50px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      margin-top: 1rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      border: 2px solid black;
+      align-self: center;
+      margin-top: 2rem;
+      &:hover {
+        background: black;
+        border: 2px solid transparent;
+        color: white;
+      }
+    }
+  }
+}

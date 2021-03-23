@@ -1,0 +1,68 @@
+@import "../partials/resets";
+@import "../partials/variables";
+#scroll-text {
+  width: 100%;
+  background: $primary;
+  .inner-wrap {
+    overflow: hidden; /* Hide scroll bar */
+    margin-left: 10%;
+    position: relative;
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+      background: $bg-break-title;
+      color: black;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+      transform: skew(-10deg);
+      z-index: 10;
+
+      h4 {
+        transform: skew(10deg);
+        font-size: 1rem;
+      }
+    }
+    /* MIDDLE CONTAINER */
+    .wrapper {
+      width: 100%;
+      padding-left: 100%; /* Push contents to right side of screen */
+      color: white;
+      margin-left: 2rem;
+    }
+  }
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.ticker-move {
+  /* Basically move items from right side of screen to left in infinite loop */
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 10s;
+  &:hover {
+    animation-play-state: paused; /* Pause scroll on mouse hover */
+  }
+  /* ITEMS */
+  .ticker-item {
+    display: inline-block; /* Lay items in a horizontal line */
+    padding: 0 2rem;
+  }
+}

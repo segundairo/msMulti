@@ -1,0 +1,63 @@
+#video {
+  background: black;
+  padding: 7rem 0;
+}
+
+#video > .container {
+  padding: 3rem 1rem;
+  display: flex;
+  height: 300px;
+  overflow-x: auto;
+  /* Works on Firefox */
+  /* Works on Chrome, Edge, and Safari */
+}
+
+#video > .container > * {
+  scrollbar-width: thin;
+  scrollbar-color: white;
+}
+
+#video > .container::-webkit-scrollbar {
+  height: 10px;
+}
+
+#video > .container::-webkit-scrollbar-track {
+  background: white;
+}
+
+#video > .container::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+#video > .container article {
+  margin-right: 1rem;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 1fr min-content;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+#video > .container article .videoBox {
+  position: relative;
+}
+
+#video > .container article .videoBox video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#video > .container article .videoBox .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: .9rem;
+  padding: .5rem 1rem;
+  line-height: 1.2;
+}

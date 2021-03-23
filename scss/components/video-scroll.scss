@@ -1,0 +1,59 @@
+@import '../partials/variables';
+#video {
+  background:black;
+  padding: 7rem 0;
+  & > .container {
+    padding: 3rem 1rem;
+    display: flex;
+    height: 300px;
+     overflow-x: auto;
+      /* Works on Firefox */
+    & > * {
+      scrollbar-width: thin;
+      scrollbar-color: white;
+    }
+
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: black;
+      border-radius: 20px;
+      border: 3px solid white;
+    }
+    article {
+      margin-right: 1rem;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-rows: 1fr min-content;
+      border: 2px solid white;
+      padding: 5px;
+        .videoBox {
+        position: relative;
+        video {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        .title {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(0,0,0,.8);
+          color: white;
+          font-size: .9rem;
+          padding: .5rem 1rem;
+          line-height: 1.2;
+        }
+      }
+ 
+    }
+  }
+}

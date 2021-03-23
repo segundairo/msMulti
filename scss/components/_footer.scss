@@ -1,0 +1,121 @@
+#footer {
+  background: $ft-bg;
+  color: $ft-text;
+
+  padding: 2rem  ;
+  padding-top: 4rem;
+  .container {
+    .footer-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem ;
+      border-bottom: 1px solid $ft-border;
+      padding: 1rem 0;
+      & > article {
+        p {
+          color: $ft-text;
+          font-size: 0.8rem;
+
+          &:first-of-type {
+            font-size: .85rem;
+            margin-bottom: 1rem;
+            padding-right: 2rem;
+          }
+        }
+        h5 {
+          font-size: 1.5rem;
+          color: white;
+          margin-bottom: 1rem;
+        }
+        ul {
+          padding-left: 0;
+          li   {
+           a {
+             color: $ft-text;
+             font-size: .95rem;
+             transform: all .2s ease;
+             &:hover {
+               color: white;
+             }
+           }
+          }
+        }
+        .latest > article {
+          display: grid;
+          grid-template-columns: min-content 1fr;
+          column-gap: .5rem;
+          .imgBox {
+            width: 70px;
+            height: 50px;
+
+          }
+          .contentBox {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space;
+            small {
+              color: $ft-text-bt;
+              font-size: .8rem;
+            }
+            p {
+              margin-bottom: .3rem;
+              line-height: 1.1;
+              font-size: .8rem;
+
+              a {
+                color: $ft-text;
+
+              }
+            }
+          }
+          &:not(:first-of-type) {
+            margin-top: .5rem;            
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1rem;
+      a, p {
+        color: $ft-text;
+      }
+      p {
+        font-size: .9rem;
+      }
+      ul {
+        display: inline-flex;
+        padding-left: 0;
+     
+        margin: 1rem;
+        li {
+          margin-left: .5rem;
+          a {
+          //   padding-left: 1rem;
+          //   padding-bottom: 5px;
+            color: $ft-text-bt;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      ul.socials {
+       li {
+         border-radius: 50%;
+         height: 40px;
+         width: 40px;
+         border: 1px solid white;
+         line-height: 40px;
+         margin-left: .5rem;
+         a {
+           &:hover {
+             color: white;
+           }
+         }
+       }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+#diplomats {
+  padding-bottom: 7rem;
+
+  .container {
+    padding: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    .management {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      background: white;
+      gap: 3rem 2rem;
+
+      &>article {
+        display: grid;
+        grid-template-rows: 1fr auto auto;
+
+
+
+
+        .contentBox {
+          padding: 1rem;
+          // background: $md-grey;
+          text-align: center;
+
+          h4 {
+            font-size: 1.1rem !important;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+
+            a {
+              color: $primary;
+
+              &:hover {
+                color: $dark-200;
+                text-decoration: underline;
+              }
+            }
+          }
+
+          small {
+            font-weight: 100 !important;
+            letter-spacing: 0.87;
+            font-size: 0.8rem;
+          }
+        }
+
+        .btn-management {
+          border-radius: 50px;
+          padding-right: 1rem;
+          padding-left: 1rem;
+          font-weight: bold;
+          transition: all 0.2s ease;
+          border: 2px solid transparent;
+          background: black;
+          color: white;
+          justify-self: center;
+
+          &:hover {
+            border: 2px solid black;
+            background: white;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .diplomats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      background: white;
+      gap: 2rem;
+
+      &>article {
+        display: grid;
+        grid-template-rows: 1fr auto;
+
+        img {}
+
+        .contentBox {
+          padding: 1rem;
+          background: $md-grey;
+          text-align: center;
+
+          h4 {
+            font-size: 1.1rem !important;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+
+            a {
+              color: $primary;
+
+              &:hover {
+                color: $dark-200;
+                text-decoration: underline;
+              }
+            }
+          }
+
+          small {
+            font-weight: 100 !important;
+            letter-spacing: 0.87;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

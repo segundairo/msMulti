@@ -1,0 +1,63 @@
+#services-board {
+   background: $md-grey-2;
+   padding-bottom: 7rem;
+   display: grid;
+   place-items: center;
+
+   .container {
+
+
+      .services {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+         gap: 1rem;
+         padding: 1rem 0;
+         padding-left: 4rem !important;
+         padding-right: 4rem !important;
+
+         &>article {
+            padding: 3rem 2rem;
+            background: white;
+            grid-column: span 2;
+            display: grid;
+            grid-template-rows: min-content 1fr;
+            row-gap: .5rem;
+            justify-items: center;
+            transition: all .3s ease;
+            a {
+               text-decoration: none;
+               transition: .2s ease all;
+               &:hover {
+                  background: white;
+                  color: limegreen;
+               }
+            }
+
+            .contentBox {
+               h3 {
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  font-family: 'Muli';
+                  margin: 0;
+                  font-size: 1rem;
+                  text-align: center;
+               }
+
+               p {
+                  font-size: .9rem;
+                  margin-top: 1rem;
+               }
+            }
+
+            &:hover {
+               box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+               outline-color: $primary;
+               outline-width: 3px;
+               outline-style: solid;
+            }
+         }
+
+      }
+   }
+
+}

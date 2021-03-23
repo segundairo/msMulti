@@ -1,0 +1,222 @@
+#info-box {
+  padding-bottom: 7rem;
+  background: white;
+
+  & > .container {
+    position: relative;
+    padding-bottom: 4rem !important;
+
+    .section-header {
+      background: white;
+    }
+
+    .infos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      background: $lt-grey;
+      & > *:first-of-type {
+        grid-row: 1 / span 3;
+        grid-column: 1 / 1;
+      }
+
+      article {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 0.5rem;
+        background: white;
+
+        .contentBox {
+          height: 100%;
+          width: 100%;
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          h5 {
+            font-size: 0.85rem;
+            font-weight: 100;
+          }
+          p {
+    
+            line-height: 1.2;
+              letter-spacing: 1px; 
+                font-size: .95rem;
+               color: $dark-200;
+
+            a {
+              text-decoration: none;
+
+
+              &:hover {
+                color: $primary;
+              }
+            }
+          }
+        }
+
+        .imgBox {
+          height: 120px;
+        }
+      }
+
+      article:first-of-type {
+        background: $md-grey;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        justify-items: center;
+        padding: 2rem;
+
+        & > .imgBox {
+          width: 250px;
+          height: 250px;
+          margin-bottom: 1rem;
+
+          img {
+            border-radius: 50%;
+
+          }
+        }
+
+        .contentBox {
+          margin-top: 0.5rem;
+          display: block;
+          p {
+            margin-top: 0.5rem;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #info-box {
+    & > .container {
+      padding: 1rem;
+
+      .infos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        & > *:first-of-type {
+          grid-row: 1 / span 2;
+          grid-column: 1 / span 2;
+          margin-bottom: 2rem;
+          border-bottom: none;
+         
+        }
+
+        article {
+          grid-column: 1 / span 2;
+          display: grid;
+          grid-template-columns: min-content 1fr;
+          column-gap: 1rem;
+          box-shadow: inset 0 0 0 10px rgba(212, 214, 214, 0.4);
+
+          .contentBox {
+            padding: 1rem;
+          }
+
+          &:not(:first-of-type) {
+            place-items: center;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          .imgBox {
+            width: 150px;
+
+            margin-left: 12px;
+          }
+        }
+
+        article:first-of-type {
+          & > .imgBox {
+            width: 100%;
+            img {
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #info-box {
+    & > .container {
+      .infos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        & > *:first-of-type {
+          grid-row: 1 / span 1;
+          grid-column: 1 / span 1;
+          margin-bottom: 1rem;
+        }
+
+        article {
+          grid-template-columns: 1fr;
+          background: white;
+          box-shadow: inset 0 0 0 10px rgba(212, 214, 214, 0.4);
+
+          &:not(:first-of-type) {
+            margin-bottom: 1rem;
+          }
+
+          .imgBox {
+            height: 250px;
+            width: 97%;
+            margin-left: 0;
+          }
+          .contentBox {
+            padding: 1rem 2rem;
+            padding-left: 2.5rem;
+            p {
+              margin-top: 1rem;
+            }
+          }
+        }
+
+        article:first-of-type {
+          background: white;
+          padding: 0;
+
+          & > .imgBox {
+            height: 250px;
+            width: auto;
+            margin-bottom: 0;
+
+            img {
+              border-radius: 0%;
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          & > .contentBox {
+            display: block;
+
+            small {
+              margin-top: 1rem;
+            }
+
+           
+
+            p {
+              font-size: 1.05rem;
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

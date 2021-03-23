@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Open Sans" !important;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.2 !important;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#scroll-text {
+  width: 100%;
+  background: #006400;
+}
+
+#scroll-text .inner-wrap {
+  overflow: hidden;
+  /* Hide scroll bar */
+  margin-left: 10%;
+  position: relative;
+  /* MIDDLE CONTAINER */
+}
+
+#scroll-text .inner-wrap .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  background: #FFEA00;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transform: skew(-10deg);
+  z-index: 10;
+}
+
+#scroll-text .inner-wrap .title h4 {
+  transform: skew(10deg);
+  font-size: 1rem;
+}
+
+#scroll-text .inner-wrap .wrapper {
+  width: 100%;
+  padding-left: 100%;
+  /* Push contents to right side of screen */
+  color: white;
+  margin-left: 2rem;
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-move {
+  /* Basically move items from right side of screen to left in infinite loop */
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 10s;
+  /* ITEMS */
+}
+
+.ticker-move:hover {
+  animation-play-state: paused;
+  /* Pause scroll on mouse hover */
+}
+
+.ticker-move .ticker-item {
+  display: inline-block;
+  /* Lay items in a horizontal line */
+  padding: 0 2rem;
+}

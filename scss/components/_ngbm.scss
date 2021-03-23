@@ -1,0 +1,44 @@
+#ngbm {
+  background: $bg-cta;
+  padding: 5rem 3rem;
+  .container {
+    text-align: center;
+    max-width: 700px;
+    p {
+      color: white;
+      font-size: 1.5rem;
+      font-family: "Lato";
+      span {
+        color: $text-cta;
+      }
+      &:last-of-type {
+         font-size: clamp(.9rem, 2.5vw, 1.2rem);
+         margin-top: 1rem;
+        line-height: 1.4;
+        color: #ccc;
+        font-weight: lighter;
+      }
+      &:first-of-type {
+        line-height: 1.4;
+        font-size: clamp(1.2rem, 2.5vw, 2rem);
+      }
+    }
+    a {
+      border-radius: 50px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      margin-top: 1rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      border: 2px solid white;
+      background: transparent !important;
+        color: $btn-cta;
+
+      &:hover {
+        background: $btn-cta !important;
+        border: 2px solid transparent;
+        color: $bg-cta;
+      }
+    }
+  }
+}

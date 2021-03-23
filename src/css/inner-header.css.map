@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,aAAa,CAAC;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,ECFH,OAAO;EDGd,KAAK,EAAE,KAAK;CAWd;;AAdD,AAIG,aAJU,CAIV,UAAU,CAAC;EACR,OAAO,EAAE,MAAM;CAQjB;;AAbJ,AAMM,aANO,CAIV,UAAU,CAEP,IAAI,CAAC;EACF,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,QAAQ;CAIvB;;AAZP,AASS,aATI,CAIV,UAAU,CAEP,IAAI,CAGD,EAAE,CAAC;EACA,SAAS,EAAE,IAAI;CACjB",
+    "sources": [
+        "../../scss/components/inner-header.scss",
+        "../../scss/partials/_variables.scss"
+    ],
+    "names": [],
+    "file": "inner-header.css"
+}

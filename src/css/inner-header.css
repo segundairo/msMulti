@@ -1,0 +1,19 @@
+#inner-header {
+  height: 25vh;
+  background: #006400;
+  color: white;
+}
+
+#inner-header .container {
+  padding: 2rem 0;
+}
+
+#inner-header .container main {
+  display: flex;
+  align-items: flex-end;
+}
+
+#inner-header .container main li {
+  font-size: 6rem;
+}
+/*# sourceMappingURL=inner-header.css.map */
