@@ -3,7 +3,7 @@
   background: linear-gradient(-45deg, #23d5ab, #263238, #23a6d5, #006400);
   background: linear-gradient(-45deg, #d3dee1, #23d5ab, #23d5ab, #263238);
   background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #23d5ab, #ccc);
-  background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #a9eede, #ccc);
+  background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #68cfb7, #ccc);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: $header-inner;
@@ -56,6 +56,38 @@
 #page-content {
   padding: 3rem 0;
   .container {
+     .main-area {
+        margin-bottom: 2px;
+        img {
+           max-height: 400px;
+        }
+
+        .metabox {
+           padding: .5rem ;
+           background: $md-grey;
+           margin: 1rem 0;
+           border-left: 3px solid $dark-200;
+           letter-spacing: 1px;
+           small {
+              a {
+                 font-weight: bold;
+              }
+              span {
+                 a {
+                    font-weight: normal;
+                    margin-left: 1rem;
+                    font-style: italic;
+                 }
+              }
+           }
+           a {
+              color: $dark-200;
+           }
+        }
+        p {
+           line-height: 1.5;
+        }
+     }
      .sidebar {
         article + article {
            margin-top: 3rem;
