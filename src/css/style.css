@@ -1077,7 +1077,7 @@ nav .brand {
   background: linear-gradient(-45deg, #23d5ab, #263238, #23a6d5, #006400);
   background: linear-gradient(-45deg, #d3dee1, #23d5ab, #23d5ab, #263238);
   background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #23d5ab, #ccc);
-  background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #68cfb7, #ccc);
+  background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #b6e9dd, #ccc);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: #5c5c5c;
@@ -1129,10 +1129,18 @@ nav .brand {
 
 #page-content {
   padding: 3rem 0;
+  height: 100%;
+}
+
+#page-content .container {
+  height: 100%;
 }
 
 #page-content .container .main-area {
+  min-height: 100%;
   margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
 #page-content .container .main-area img {
@@ -1140,7 +1148,7 @@ nav .brand {
 }
 
 #page-content .container .main-area .metabox {
-  padding: .5rem;
+  padding: 0.5rem;
   background: #f2f2f2;
   margin: 1rem 0;
   border-left: 3px solid #263238;
@@ -1163,6 +1171,14 @@ nav .brand {
 
 #page-content .container .main-area p {
   line-height: 1.5;
+}
+
+#page-content .container .main-area > article {
+  flex: 2;
+}
+
+#page-content .container .main-area .page-indicators {
+  justify-self: flex-end;
 }
 
 #page-content .container .sidebar article + article {
@@ -1224,6 +1240,55 @@ nav .brand {
   color: #263238;
 }
 
+.press > article {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1rem;
+  margin-top: 1rem !important;
+}
+
+.press > article:first-of-type {
+  margin-top: 1rem;
+}
+
+.press > article .pr-date {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 1rem;
+  text-align: center;
+  padding: 0;
+  border: 2px solid #006400;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+
+.press > article .pr-date .month {
+  background: #006400;
+  color: white;
+  padding: 2px 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.press > article .pr-date .day {
+  padding: 3px 0px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.press > article p {
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  font-size: .95rem;
+}
+
+.press > article p a {
+  color: #263238;
+}
+
 .search-box {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -1231,7 +1296,7 @@ nav .brand {
 }
 
 .search-box input {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .search-box .btn {
