@@ -1077,7 +1077,7 @@ nav .brand {
   background: linear-gradient(-45deg, #23d5ab, #263238, #23a6d5, #006400);
   background: linear-gradient(-45deg, #d3dee1, #23d5ab, #23d5ab, #263238);
   background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #23d5ab, #ccc);
-  background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #b6e9dd, #ccc);
+  background: linear-gradient(-45deg, #d3dee1, #d9d8d8, #23d5ab, #ccc);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   color: #5c5c5c;
@@ -1125,6 +1125,28 @@ nav .brand {
 #inner-header .container .main article li + li::before {
   content: "|";
   margin: 0 1rem;
+}
+
+.archive-press > div {
+  display: flex;
+}
+
+.archive-press > div:not(:last-of-type) {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.archive-press > div > .press p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.archive-press > div > .press > article {
+  margin: .5rem 0 !important;
+}
+
+.archive-press > div .btn-press {
+  align-self: center;
+  margin-left: 2rem;
 }
 
 #page-content {
@@ -1179,6 +1201,7 @@ nav .brand {
 
 #page-content .container .main-area .page-indicators {
   justify-self: flex-end;
+  margin: 3rem 0 2rem;
 }
 
 #page-content .container .sidebar article + article {
@@ -1259,17 +1282,21 @@ nav .brand {
   text-align: center;
   padding: 0;
   border: 2px solid #006400;
+  border: 2px solid black;
   border-radius: 5px;
   align-self: flex-start;
+  border-radius: 45%;
 }
 
 .press > article .pr-date .month {
   background: #006400;
+  background: black;
   color: white;
   padding: 2px 0px;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.1rem;
+  margin-top: -3px;
 }
 
 .press > article .pr-date .day {
@@ -1303,6 +1330,138 @@ nav .brand {
   padding: 1rem !important;
 }
 
+.archive-news {
+  flex: 2;
+}
+
+.archive-news article + article {
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+.archive-news article {
+  display: grid;
+  grid-template-columns: .75fr 1fr;
+  background: #f2f2f2;
+  grid-template-rows: min-content;
+}
+
+.archive-news article .contentBox {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.archive-news article .read-more {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.archive-news article .read-more a {
+  color: #1da11d;
+  display: inline-block;
+  position: relative;
+}
+
+.archive-news article .read-more a:after {
+  content: "\f061";
+  font-family: FontAwesome;
+  margin-left: -10px;
+  opacity: 0;
+  vertical-align: middle;
+  transition: margin .3s, opacity .3s;
+}
+
+.archive-news article .read-more a:hover:after {
+  margin-left: 5px;
+  opacity: 1;
+}
+
+.archive-news article:first-of-type {
+  margin-top: 2rem;
+}
+
+.archive-news .date {
+  font-size: .9rem;
+}
+
+.archive-news .tags ul {
+  display: inline-flex;
+  padding-left: 0 !important;
+}
+
+.archive-news .tags ul::before {
+  font-family: FontAwesome;
+  content: "\f02b";
+  margin-right: 10px;
+}
+
+.archive-news .tags li {
+  margin-right: 2px;
+  font-style: italic;
+  font-size: .8rem;
+}
+
+.archive-news .tags li:not(:first-of-type):before {
+  content: "|";
+  margin: 0 .3rem;
+}
+
+.archive-news .tags li:first-child {
+  margin-left: -4px;
+}
+
+.archive-team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  margin-top: 2rem;
+  gap: 3rem 2rem;
+  place-content: start center;
+}
+
+.archive-team article .imgBox {
+  height: 200px;
+  border-radius: 50%;
+  padding-bottom: 5px;
+  border: 1px solid #263238;
+}
+
+.archive-team article .imgBox img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.archive-team article .contentBox {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.archive-team article .contentBox h4 {
+  position: relative;
+  padding-bottom: .5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.archive-team article .contentBox h4:after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 80px;
+  height: 2px;
+  background: #006400;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.archive-team article .contentBox h4 small {
+  font-size: 1rem;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -1314,3 +1473,11 @@ nav .brand {
     background-position: 0% 50%;
   }
 }
+
+@media (max-width: 991.98px) {
+  .archive-news article {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
