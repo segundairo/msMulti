@@ -1462,16 +1462,64 @@ nav .brand {
   font-size: 1rem;
 }
 
-@keyframes gradient {
+.archive-faqs {
+  margin-top: 2rem;
+}
+
+.archive-faqs details[open] summary ~ * {
+  animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    opacity: 0;
   }
   100% {
-    background-position: 0% 50%;
+    opacity: 1;
   }
+}
+
+.archive-faqs details summary::-webkit-details-marker {
+  display: none;
+}
+
+.archive-faqs details summary {
+  width: 100%;
+  padding: 0.5rem 0;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 400;
+  list-style: none;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.archive-faqs details summary:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.5rem;
+  line-height: 0;
+  margin-top: 0.5rem;
+  right: 0;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+
+.archive-faqs details[open] summary:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+
+.archive-faqs details summary {
+  outline: 0;
+}
+
+.archive-faqs details p {
+  font-size: 1rem;
+  margin: 0 0 1rem;
+  padding-top: 1rem;
 }
 
 @media (max-width: 991.98px) {
